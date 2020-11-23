@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "644206679877",
+    "firebase_url": "https://fuddy-4c952.firebaseio.com",
+    "project_id": "fuddy-4c952",
+    "storage_bucket": "fuddy-4c952.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:644206679877:android:a47abe5445a90a808b102c",
+        "android_client_info": {
+          "package_name": "com.example.fuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "644206679877-v2ac1q55jbbim4dgpdf3ulb4vc1h8l96.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXxYo_8tTmvGKWtM8otG62El_KbVsJI4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "644206679877-v2ac1q55jbbim4dgpdf3ulb4vc1h8l96.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
