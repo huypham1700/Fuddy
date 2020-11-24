@@ -3,10 +3,7 @@
     <gradient android:endColor="@color/colorRed"/>
 
     <corners
-        android:topLeftRadius="2500dp"
-        android:bottomRightRadius="2500dp"
-        />
-
-    <size
-        android:width="-30dp"/>
+        android:topLeftRadius="400dp"
+        android:bottomLeftRadius="400dp"
+        android:radius="2dp"/>
 </shape>
