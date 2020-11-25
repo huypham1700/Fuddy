@@ -24,7 +24,7 @@ public class Shop implements Serializable {
     @Builder.Default
     private String phoneNumber = "";
     @Builder.Default
-    private int imageId = 0;
+    private String imageUrl = "";
     @Builder.Default
     private String description = "";
 

@@ -26,7 +26,7 @@ public class User implements Serializable {
     @Builder.Default
     private String name ="";
     @Builder.Default
-    private int imageId = 0;
+    private String imageUrl = "";
     @Builder.Default
     private String phoneNumber ="";
     @Builder.Default
@@ -36,12 +36,12 @@ public class User implements Serializable {
     @Builder.Default
     private String userType="App login";
 
-    public User(int id, String username, String password, String name, int imageId, String phoneNumber, String tokenKey, String expiredDate, String userType) {
+    public User(int id, String username, String password, String name, String imageUrl, String phoneNumber, String tokenKey, String expiredDate, String userType) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.name = name;
-        this.imageId = imageId;
+        this.imageUrl = imageUrl;
         this.phoneNumber = phoneNumber;
         this.tokenKey = tokenKey;
         this.expiredDate = expiredDate;
@@ -54,7 +54,7 @@ public class User implements Serializable {
                     .username(JSONUser.getString("username"))
                     .password(JSONUser.getString("password"))
                     .name(JSONUser.getString("name"))
-                    .imageId(JSONUser.getInt("imageId"))
+                    .imageUrl(JSONUser.getString("imageUrl"))
                     .phoneNumber(JSONUser.getString("phoneNumber"))
                     .tokenKey(JSONUser.getString("tokenKey"))
                     .expiredDate(JSONUser.getString("expiredDate"))

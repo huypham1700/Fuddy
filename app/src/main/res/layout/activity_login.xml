@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".activities.LoginActivity">
 
     <TextView
         android:id="@+id/textView4"
@@ -36,7 +36,7 @@
         app:layout_constraintVertical_bias="0.264" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/txtLoginEmail"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -65,7 +65,7 @@
         app:layout_constraintVertical_bias="0.391" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/txtLoginPassword"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -85,20 +85,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autoLink="all"
+        android:clickable="true"
         android:text="Have no account? Sign Up"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintHorizontal_bias="0.159"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.513" />
+        app:layout_constraintVertical_bias="0.511" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autoLink="all"
         android:text="Forget your password?"
+        android:clickable="true"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -108,11 +110,12 @@
         app:layout_constraintVertical_bias="0.512" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/btnLogin"
         android:layout_width="220dp"
         android:layout_height="65dp"
         android:background="@drawable/signin_bg2"
         android:orientation="horizontal"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -124,7 +127,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="70dp"
+            android:layout_marginStart="70dp"
             android:text="SIGN IN"
             android:textColor="@color/colorPurple"
             android:textSize="20dp" />
@@ -139,11 +142,12 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/btnGoogleLogin"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:background="@drawable/signin_bg3"
         android:orientation="horizontal"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -170,14 +174,16 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/btnFacebookLogin"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:background="@drawable/signin_bg4"
         android:orientation="horizontal"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toEndOf="@+id/btnGoogleLogin"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.927">
 

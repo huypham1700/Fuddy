@@ -1,14 +1,17 @@
-package com.example.fuddy;
+package com.example.fuddy.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import android.os.Bundle;
 
-public class SignUpActivity extends AppCompatActivity {
+import com.example.fuddy.R;
+
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.activity_main);
     }
 }
