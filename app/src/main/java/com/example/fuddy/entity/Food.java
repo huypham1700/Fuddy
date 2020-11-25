@@ -1,21 +1,18 @@
 package com.example.fuddy.entity;
 
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
-
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.Serializable;
 
 import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
 
-@Entity
 @Data
 @Getter
 @Builder
-public class Food {
-    @PrimaryKey
+public class Food implements Serializable {
     @Builder.Default
     private int id =0;
     @Builder.Default
@@ -31,18 +28,7 @@ public class Food {
     @Builder.Default
     private String description="";
     @Builder.Default
-    private int imageId=0;
-
-    public Food(int id, int shopId, String name, String address, String category, double price, String description, int imageId) {
-        this.id = id;
-        this.shopId = shopId;
-        this.name = name;
-        this.address = address;
-        this.category = category;
-        this.price = price;
-        this.description = description;
-        this.imageId = imageId;
-    }
+    private String imageUrl="";
 
     public Food createFoodFromJson(JSONObject jsonObject){
         try{
@@ -54,7 +40,7 @@ public class Food {
                     .category(jsonObject.getString("category"))
                     .price(jsonObject.getDouble("price"))
                     .description(jsonObject.getString("description"))
-                    .imageId(jsonObject.getInt("imageId"))
+                    .imageUrl(jsonObject.getString("imageUrl"))
                     .build();
         }catch (JSONException e){
             return null;
