@@ -1,16 +1,12 @@
 package com.example.fuddy.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fuddy.R;
 import com.example.fuddy.viewmodel.UserViewModel;
@@ -18,9 +14,9 @@ import com.example.fuddy.viewmodel.UserViewModel;
 public class LoginActivity extends AppCompatActivity implements IActivity {
 
     private TextView textView5;
-    private EditText txtEmail;
-    private EditText txtPassword;
-    private LinearLayout btnLogin;
+    private EditText edtSigninEmail;
+    private EditText edtSigninPassword;
+    private LinearLayout llSignin;
     private UserViewModel userViewModel;
 
     @Override
@@ -33,10 +29,10 @@ public class LoginActivity extends AppCompatActivity implements IActivity {
 
     @Override
     public void mappingUI() {
-        textView5 = findViewById(R.id.textView5);
-        txtEmail = findViewById(R.id.txtLoginEmail);
-        txtPassword = findViewById(R.id.txtLoginPassword);
-        btnLogin = findViewById(R.id.btnLogin);
+        textView5 = findViewById(R.id.txtSignUpAccount);
+        edtSigninEmail = findViewById(R.id.edtSigninEmail);
+        edtSigninPassword = findViewById(R.id.edtSigninPassword);
+        llSignin= findViewById(R.id.llSignIn);
         userViewModel = new UserViewModel();
     }
 
