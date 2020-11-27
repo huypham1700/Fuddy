@@ -1,8 +1,5 @@
 package com.example.fuddy.entity;
 
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -14,9 +11,7 @@ import lombok.Getter;
 @Builder
 @Getter
 @Data
-@Entity
 public class User implements Serializable {
-    @PrimaryKey
     @Builder.Default
     private int id=0;
     @Builder.Default
@@ -36,17 +31,6 @@ public class User implements Serializable {
     @Builder.Default
     private String userType="App login";
 
-    public User(int id, String username, String password, String name, String imageUrl, String phoneNumber, String tokenKey, String expiredDate, String userType) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-        this.name = name;
-        this.imageUrl = imageUrl;
-        this.phoneNumber = phoneNumber;
-        this.tokenKey = tokenKey;
-        this.expiredDate = expiredDate;
-        this.userType = userType;
-    }
     public User createUserFromJson(JSONObject JSONUser){
         try{
             return User.builder()
