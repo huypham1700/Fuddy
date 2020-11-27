@@ -6,38 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".activities.LoginActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:background="@drawable/signin_bg"
-        android:fontFamily="sans-serif"
-        android:text="Sign In"
-        android:textColor="@color/colorPurple"
-        android:textSize="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.173"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/signin_bg"
+            android:fontFamily="sans-serif"
+            android:text="Sign In"
+            android:textColor="@color/colorPurple"
+            android:textSize="50dp" />
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="35dp"
             android:text="Email"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:layout_marginTop="30dp"/>
 
         <EditText
             android:id="@+id/edtSigninEmail"
@@ -130,8 +126,8 @@
                 android:id="@+id/llGoogle"
                 android:layout_width="180dp"
                 android:layout_height="50dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
                 android:background="@drawable/signin_bg3"
                 android:orientation="horizontal">
 
@@ -157,8 +153,8 @@
                 android:id="@+id/llFacebook"
                 android:layout_width="180dp"
                 android:layout_height="50dp"
+                android:layout_gravity="center"
                 android:layout_marginStart="15dp"
-                android:layout_marginTop="50dp"
                 android:background="@drawable/signin_bg4"
                 android:orientation="horizontal">
 
