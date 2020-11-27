@@ -13,7 +13,7 @@ import lombok.Getter;
 @Data
 public class User implements Serializable {
     @Builder.Default
-    private int id=0;
+    private int id=1;
     @Builder.Default
     private String username ="";
     @Builder.Default

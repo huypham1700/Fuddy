@@ -9,52 +9,54 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.fuddy.HomeFragment;
 import com.example.fuddy.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ActionBar toolbar;
+    private ActionBar toolBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        toolbar = getSupportActionBar();
-
+        toolBar = getSupportActionBar();
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-        toolbar.setTitle("Home");
+        toolBar.setTitle("Home");
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment fragment;
-            switch (item.getItemId()) {
+            switch (item.getItemId()){
                 case R.id.navigation_home:
-                    toolbar.setTitle("Home");
+                    toolBar.setTitle("Home");
+                    fragment = new HomeFragment();
+                    loadFragment(fragment);
                     return true;
                 case R.id.navigation_store:
-                    toolbar.setTitle("Store");
+                    toolBar.setTitle("Store");
                     return true;
                 case R.id.navigation_order:
-                    toolbar.setTitle("Order");
+                    toolBar.setTitle("Order");
                     return true;
                 case R.id.navigation_setting:
-                    toolbar.setTitle("Setting");
+                    toolBar.setTitle("Setting");
                     return true;
                 case R.id.navigation_notifications:
-                    toolbar.setTitle("Notifications");
+                    toolBar.setTitle("Notifications");
+                    return true;
             }
             return false;
         }
     };
 
     private void loadFragment(Fragment fragment) {
+        // load fragment
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.frame_container, fragment);
         transaction.addToBackStack(null);
