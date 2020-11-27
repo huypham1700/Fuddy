@@ -1,8 +1,5 @@
 package com.example.fuddy.entity;
 
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -14,11 +11,9 @@ import lombok.Getter;
 @Builder
 @Getter
 @Data
-@Entity
 public class User implements Serializable {
-    @PrimaryKey
     @Builder.Default
-    private int id=0;
+    private int id=1;
     @Builder.Default
     private String username ="";
     @Builder.Default
