@@ -1,4 +1,4 @@
-package com.example.fuddy.activities;
+package com.example.fuddy.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
