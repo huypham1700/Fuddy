@@ -16,8 +16,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fuddy.R;
+import com.example.fuddy.viewmodel.UserViewModel;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements IActivity {
 
     private TextView textView5;
     private EditText edtSigninEmail;
@@ -29,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        textView5 = findViewById(R.id.textView5);
+        textView5 = findViewById(R.id.txtSignUpAccount);
         textView5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
