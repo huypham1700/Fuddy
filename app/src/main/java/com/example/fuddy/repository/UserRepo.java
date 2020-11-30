@@ -7,11 +7,11 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class UserRepo {
-    private  FuddyService fuddyService;
+    private FuddyService fuddyService;
     private String result;
     public UserRepo(){
         result= "";
-        fuddyService= RetrofitInstance.getInstance().create(FuddyService.class);
+        fuddyService=RetrofitInstance.getInstance().create(FuddyService.class);
     }
 
     public void login(String email, String password){

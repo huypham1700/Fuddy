@@ -15,5 +15,6 @@ public interface FuddyService {
     Call<User> login(
             @Field("email") String email,
             @Field("password") String password);
-
+    @GET("/users/login")
+    User getUser();
 }

@@ -14,9 +14,9 @@ import lombok.Getter;
 @Builder
 public class Food implements Serializable {
     @Builder.Default
-    private int id =0;
+    private int id =1;
     @Builder.Default
-    private int shopId=0;
+    private int shopId=1;
     @Builder.Default
     private String name ="";
     @Builder.Default

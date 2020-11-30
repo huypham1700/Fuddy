@@ -14,7 +14,7 @@ import lombok.Getter;
 @Builder
 public class Shop implements Serializable {
     @Builder.Default
-    private int id = 0;
+    private int id = 1;
     @Builder.Default
     private String name = "";
     @Builder.Default
