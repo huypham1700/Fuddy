@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SettingFragment">
+    android:background="@color/colorWhite"
+    tools:context=".activities.Home.ui.dashboard.SettingFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -65,15 +66,15 @@
                         android:id="@+id/txtProfileAccount"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        android:textColor="@color/colorGray"
-                        android:textSize="20sp"
-                        android:text="tungnt@gmail.com"/>
+                        android:textSize="20dp"
+                        android:hint="tungnt@gmail.com" />
 
                     <LinearLayout
                         android:id="@+id/llEditProfile"
                         android:layout_width="180dp"
                         android:layout_height="wrap_content"
                         android:background="#D3D3D3"
+                        android:clickable="true"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="15dp">
 
@@ -94,9 +95,9 @@
 
             <LinearLayout
                 android:layout_width="350dp"
-                android:layout_height="30dp"
+                android:layout_height="10dp"
                 android:background="@drawable/setting_bg"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -126,10 +127,17 @@
                         android:id="@+id/switchilly"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
+                        android:layout_gravity="center"
                         android:layout_weight="1"
                         android:gravity="center" />
 
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@drawable/setting_bg"
+                    android:layout_gravity="center"/>
 
                 <LinearLayout
                     android:id="@+id/isPrivacy"
@@ -154,7 +162,7 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:background="@color/white"
+                        android:background="@color/colorWhite"
                         android:foregroundGravity="center"
                         android:src="@drawable/ic_navigate_next"/>
 
@@ -165,7 +173,13 @@
                     android:id="@+id/txtPrivacy"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Day la privacy cua app neeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" />
+                    android:text="Day la privacy cua app neeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@drawable/setting_bg"
+                    android:layout_gravity="center"/>
 
                 <LinearLayout
                     android:id="@+id/isPolicy"
@@ -191,7 +205,7 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:background="@color/white"
+                        android:background="@color/colorWhite"
                         android:src="@drawable/ic_navigate_next"/>
 
                 </LinearLayout>
@@ -201,7 +215,13 @@
                     android:id="@+id/txtPolicy"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Day la Policy cua app neeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" />
+                    android:text="Day la Policy cua app neeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@drawable/setting_bg"
+                    android:layout_gravity="center"/>
 
                 <LinearLayout
                     android:id="@+id/isApp"
@@ -227,7 +247,7 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:background="@color/white"
+                        android:background="@color/colorWhite"
                         android:src="@drawable/ic_navigate_next"/>
 
                 </LinearLayout>
@@ -236,8 +256,14 @@
                     android:id="@+id/txtAppVersion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="1.0"
+                    android:text="Version 3.0"
                     android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@drawable/setting_bg"
+                    android:layout_gravity="center"/>
 
                 <LinearLayout
                     android:id="@+id/isOut"
@@ -264,8 +290,8 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:background="@color/white"
-                        android:src="@drawable/sign_out"/>
+                        android:background="@color/colorWhite"
+                        android:src="@drawable/exit_64px"/>
 
                 </LinearLayout>
 
